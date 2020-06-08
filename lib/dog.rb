@@ -43,8 +43,9 @@ class Dog
     dog
   end
   
-  def self.new_from_db(atr)
-   Dog.create(atr)
+  def self.new_from_db
+    binding.pry
+   Dog.create
   end
   
   def self.find_by_id(id)

@@ -50,7 +50,7 @@ class Dog
   def self.find_by_id(id)
     row = DB[:conn].execute('SELECT * FROM dogs WHERE id = ?', id).flatten
     binding.pry
-    dog = Dog.new(row)
+    dog = Dog.new(id: row[0], name: row[1], breed: row[2])
     dog
   end
     

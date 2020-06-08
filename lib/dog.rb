@@ -44,7 +44,7 @@ class Dog
   end
   
   def self.new_from_db(atr)
-   all = DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', atr[0], atr[1]).flatten
+   all = DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', atr).flatten
   binding.pry
    dog = Dog.new(all)
    dog

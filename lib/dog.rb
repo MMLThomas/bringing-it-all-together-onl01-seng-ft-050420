@@ -57,7 +57,7 @@ class Dog
     binding.pry
     dog =  DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', atr[:name], atr[:breed])
     if !dog.empty?
-      dog = Dog.new.new_from_db(dog)
+      dog = Dog.new.new_from_db(dog[0])
     else
       dog = Dog.new.create(atr)
     end

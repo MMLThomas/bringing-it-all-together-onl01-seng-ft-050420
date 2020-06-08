@@ -1,3 +1,4 @@
+require 'pry'
 class Dog 
   attr_accessor :name, :breed, :id
   
@@ -44,6 +45,7 @@ class Dog
   
   def self.new_from_db(name, breed)
    atr = DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', name, breed).flatten
+   binding.pry
    dog = Dog.new(atr[0], atr[1])
    dog
   end

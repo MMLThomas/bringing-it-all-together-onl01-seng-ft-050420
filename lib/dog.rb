@@ -44,7 +44,6 @@ class Dog
   end
   
   def self.new_from_db(row)
-    #binding.pry
    dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end
   
@@ -53,8 +52,11 @@ class Dog
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
     dog
   end
-    
   
+  def self.find_or_create_by(atr)
+    binding.pry
+    
+  end
   
   
 end

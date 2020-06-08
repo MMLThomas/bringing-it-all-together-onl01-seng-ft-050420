@@ -36,8 +36,10 @@ class Dog
     self
   end
   
-  def self.create
-    
+  def self.create(atr)
+    dog = Dog.new(atr)
+    dog.save
+    dog
   end
   
   

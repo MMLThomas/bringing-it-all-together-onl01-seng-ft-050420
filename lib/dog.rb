@@ -59,7 +59,7 @@ class Dog
     if !dog.empty?
       dog = Dog.new.new_from_db(dog[0])
     else
-      dog = Dog.new.create(atr)
+      dog = Dog.new.create(row)
     end
     dog
   end

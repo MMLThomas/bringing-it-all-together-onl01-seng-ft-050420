@@ -59,7 +59,7 @@ class Dog
     if !dog.empty?
       binding.pry
       data = dog[0]
-      dog = Dog.new.new_from_db(data)
+      dog = Dog.new_from_db(data)
     else
       dog = Dog.new.create(row)
     end

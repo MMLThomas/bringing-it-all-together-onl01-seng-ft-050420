@@ -61,7 +61,6 @@ class Dog
     else
       dog = Dog.create(row)
     end
-    dog
   end
   
   

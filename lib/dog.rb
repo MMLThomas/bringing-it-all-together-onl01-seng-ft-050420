@@ -54,8 +54,8 @@ class Dog
   end
   
   def self.find_or_create_by(atr)
-    #binding.pry
-    dog =  DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', atr[:name], atr[:breed])
+    binding.pry
+    dog =  DB[:conn].execute('SELECT * FROM dogs WHERE name = ?, breed = ?', atr:, atr[:breed])
     if !dog.empty?
       dog = Dog.new.new_from_db(dog)
     else
